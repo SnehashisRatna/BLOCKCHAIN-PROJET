@@ -1,0 +1,103 @@
+/* Blue-Themed Glassmorphism Design */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #7ed6df;
+  --background-gradient: linear-gradient(145deg, #a1c4fd, #c2e9fb);
+  --glass-background: rgba(255, 255, 255, 0.2);
+  --text-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --hover-color: #1a73e8;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: var(--background-gradient);
+  color: var(--text-color);
+}
+
+.app-container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: var(--glass-background);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.subheading {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.form-section, .update-section, .shipment-info {
+  background: var(--glass-background);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.form-section h2, .update-section h2, .shipment-info h2 {
+  color: var(--primary-color);
+}
+
+.form-section input, .update-section input, .update-section select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-section button, .update-section button {
+  width: 100%;
+  padding: 10px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.form-section button:hover, .update-section button:hover {
+  background: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+.shipment-info p {
+  color: var(--secondary-color);
+}
+
+.shipment-info {
+  width: 100%;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
